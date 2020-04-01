@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onthefuze</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+</head>
+<body>
+  <div class="container">
+    <br><br>
+    <form method="post" id="form" class="animated bounceInDown delay-1s" style="display: none;">
+      <div class="form-row">
+        <div class="col-md-5 col-file">
+          <span class="btn btn-primary btn-file">
+            Seleccione una imagen <input type="file" class="form-control" placeholder="imagen" name="image" id="image" accept="image/*">
+          </span>
+          <span>o</span> 
+          <input type="text" class="form-control" placeholder="Url imagen" name="url_image" id="url_image" pattern="https://.*" title="Invalid">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Categoria" name="category" id="category"  required title="Invalid">
+        </div>
+        <div class="col">
+          <input type="submit" class="btn btn-dark" value="Agregar">
+        </div>
+      </div>
+    </form>
+    <div class="text-center"><a href="javascript:void(0)" class="showAdd" onclick="this.style.display='none';document.getElementById('form').style.display='block'">Agregar más elementos</a></div>
+    <br><hr><br>
+    <div class="grid-tools"></div>
+    <br>
+    <div class="grid" id="grid">
+      <div class="grid-item element-item category1" id="item-1"><img class="animated fadeIn delay-3s" data-src="https://picsum.photos/300/500?random=1"></div>
+      <div class="grid-item element-item category1" id="item-2"><img class="animated fadeIn delay-3s" data-src="https://picsum.photos/300?random=2"/></div>
+      <div class="grid-item element-item category2" id="item-3"><img class="animated fadeIn delay-3s" data-src="https://picsum.photos/300?random=3"/></div>
+      <div class="grid-item element-item category1" id="item-4"><img class="animated fadeIn delay-3s" data-src="https://picsum.photos/300/500?random=2"/></div>
+      <div class="grid-item element-item category3" id="item-5"><img class="animated fadeIn delay-3s" data-src="https://picsum.photos/300?random=1"/></div>
+      <div class="grid-item element-item category4" id="item-6"><img class="animated fadeIn delay-3s" data-src="https://picsum.photos/300/500?random=4"/></div>
+      <div class="grid-item element-item category3" id="item-8"><img class="animated fadeIn delay-3s" data-src="https://picsum.photos/300/600?random=7"></div>
+      <div class="grid-item element-item category3" id="item-9"><img class="animated fadeIn delay-3s" data-src="https://picsum.photos/300?random=1"></div>
+    </div>
+    <br>
+    <div>
+      <h3>Sources</h3>
+      <ul class="center">
+        <li>https://github.com/verlok/lazyload</li>
+        <li>https://daneden.github.io/animate.css/</li>
+      </ul>
+    </div>
+    <br>
+  </div>
+  
+  <!-- Bootstrap  -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  
+  <!-- Lazyload  -->
+  <script async src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@15.0.0/dist/lazyload.min.js"></script>
+
+  <script src="./assets/js/index.js"></script>
+</body>
+</html>
